@@ -1,0 +1,52 @@
+{% extends "bank/base.html" %}
+
+{% block title %}
+
+<style>
+    
+    
+    table,td,th {
+        border: 1px solid rgb(39, 39, 39);
+        border-collapse: collapse;
+        text-align: left;
+        padding: 2px;
+      }
+</style>
+<div><H2 style="color:rgba(8, 95, 8, 0.932)">Requested Account Details:</H2></div>
+{% endblock %}
+
+{% block content %}
+<div class="main">
+
+
+
+    <table>
+         <tr>
+           <th>Account Number</th>
+           <th>Customer Name</th>
+           <th>Savings Balance</th>
+           <th>Fixed Interest Rate</th>
+           <th>Branch Name</th>
+           <th>Most_RecentDate</th>
+         </tr>
+          
+ 
+                
+            <tr><td>{{acc_no}}</td>
+                <td>{{CName}}</td>
+                <td>{{balance}}</td>
+                <td>{{fixed_int_rt}}</td>
+                <td>{{bname}}</td>
+                <td>{{most_recentdate}}</td>
+                </tr>
+            
+         
+     
+  
+             
+ 
+     </table>
+  
+ </div>
+
+ {% endblock %}

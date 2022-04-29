@@ -1,0 +1,32 @@
+{% extends "bank/base.html" %}
+
+{% block title %}
+
+
+        <h1 style="color:rgba(8, 95, 8, 0.932)">Saving Account Details for all customers</h1>
+        
+          
+
+{% endblock %}
+
+{% block content %}
+
+<div class="main">
+
+
+  <div><h4>Please enter Savings Account number below:</h4></div>
+  <form action="{% url 'search_results' %}" method="get">
+    <input name="q" type="text" placeholder="Search with Acc.No">
+  </form>
+
+ </div>
+     
+ 
+ 
+    
+
+    
+  
+
+
+{% endblock %}

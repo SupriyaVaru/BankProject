@@ -1,0 +1,53 @@
+{% extends "bank/base.html" %}
+
+{% block title %}
+
+<style>
+    
+    
+    table,td,th {
+        border: 1px solid rgb(39, 39, 39);
+        border-collapse: collapse;
+        text-align: left;
+        padding: 2px;
+      }
+</style>
+<div><H2 style="color:rgba(8, 95, 8, 0.932)">Loan Account Details:</H2></div>
+{% endblock %}
+
+{% block content %}
+<div class="main">
+
+    <div><h3 style="color:blue">STATUS:</h3>
+        <h4 style="color:rgb(255, 72, 0)">{{COMMENT}}</h4></div>
+
+    <table>
+         <tr>
+           <th>Account No</th>
+           <th>Loan Type</th>
+           <th>Amount</th>
+           <th>Balance</th>
+           <th>Fixed Int.Rt</th>       
+           <th>Monthly_Repay</th>
+           <th>Branch_id</th>
+         </tr>
+          
+ 
+                
+            <tr><td>{{ACC_NO}}</td>
+                <td>{{TYPE}}</td>
+                <td>{{AMOUNT}}</td>
+                <td>{{BALANCE}}</td>
+                <td>{{FIXED_INT_RT}}</td>
+                <td>{{MONTHLY_REPAY}}</td>
+                <td>{{BRANCH_ID}}</td>
+                </tr>
+         
+         
+     
+  
+    </table>
+  
+ </div>
+
+ {% endblock %}

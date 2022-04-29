@@ -1,0 +1,10 @@
+{% load socialaccount %}
+
+<h1>Bank Login</h1>
+{% if user.is_authenticated %}
+    <p>Authentication successful for {{ user.username }} !!!</p>
+    <a button = Home href="{% url 'home' %}" >GoToHome</a><br>
+{% else %}
+Login via github
+<a href="{% provider_login_url 'github' %}">Sign Up</a>
+{% endif %}

@@ -1,0 +1,19 @@
+{% extends 'bank/base.html' %}
+{% load static %}
+
+{% block title %}<h1 style="color:rgba(8, 95, 8, 0.932)">Customer Form</h1>{% endblock %}
+
+{% block content %}
+   
+     
+
+    <p>Please use the following form to insert New Customer Details</p>
+
+    <form action="{% url 'CustomerForm' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+    </form>
+
+    
+{% endblock %}

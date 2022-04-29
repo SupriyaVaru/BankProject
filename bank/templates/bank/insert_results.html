@@ -1,0 +1,54 @@
+ {% extends "bank/base.html" %}
+
+ {% block title %}
+ 
+ <style>
+     
+     
+     table,td,th {
+         border: 1px solid rgb(39, 39, 39);
+         border-collapse: collapse;
+         text-align: left;
+         padding: 2px;
+       }
+ </style>
+ <div><H2 style="color:rgba(8, 95, 8, 0.932)">Customer Details Inserted:</H2></div>
+ {% endblock %}
+ 
+ {% block content %}
+ <div class="main">
+ 
+ 
+ 
+     <table>
+          <tr>
+            <th>SSN</th>
+            <th>Customer</th>
+            <th>Apt. No</th>
+            <th>St. No</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+          </tr>
+           
+  
+                 
+             <tr><td>{{SSN}}</td>
+                 <td>{{CNAME}}</td>
+                 <td>{{APT_NO}}</td>
+                 <td>{{STREET_NO}}</td>
+                 <td>{{CITY}}</td>
+                 <td>{{STATE}}</td>
+                 <td>{{ZIP}}</td>
+                 </tr>
+             
+          
+      
+   
+              
+  
+      </table>
+   
+  </div>
+ 
+  {% endblock %}

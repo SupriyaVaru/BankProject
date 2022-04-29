@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="'en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .item1 { grid-area: header; }
+            .item2 { grid-area: menu; }
+            .item3 { grid-area: main; }
+            .item4 { grid-area: footer; }
+            
+            .grid-container {
+              display: grid;
+              grid-template-areas:
+                'header header header header header header'
+                'menu main main main main main'
+                'menu main main main main main'
+                'footer footer footer footer footer footer';
+                
+              gap: 05px;
+              background-color: #f8f6f6;
+              padding: 05px;
+            }
+            
+            .grid-container > div {
+              background-color: rgba(229, 242, 247, 0.8);
+              text-align: left;
+              padding: 30px 0;
+              font-size: 30px;
+              
+            }
+            </style>
+
+       
+        {% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <img src="{% static 'bank/bank.png' %}" alt="Bank Avatar" style="width:20%;height:20%;">
+         
+     
+
+        <!-- Add additional CSS in static file -->
+        {% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <div class="grid-container">
+            <div class="item1">{% block title %}
+                <h1 style="color:rgba(8, 95, 8, 0.932)">Jersey Bank</h1>
+            {% endblock %}</div>
+            <div class="item2">{% block sidebar %}
+                        Menu
+                        <ul>
+                          <a href="{% url 'home' %}" >Home</a><br>
+                          <a href="{% url 'DB' %}" >Savings</a><br>
+                          <a href="{% url 'CustomerForm' %}" >Add Customer</a><br>
+                          <a href="{% url 'LoanAcct' %}" >Update Loan</a><br>
+                          
+                          
+                      </ul>
+                      {% endblock %}
+             </div>
+            <div class="item3">
+                {% block content %}
+
+            <h3>Welcome to Jersey Bank!!!</h3>
+                <h7>Your Money will Earn for you!!!</h7>
+                {% endblock %}
+                    </div>  
+            <div class="item4">
+                <p>Contact Info:<br>
+                <a href="mailto:sv247@njit.edu">sv247@njit.edu</a></p>
+            </div>
+          </div>
+              
+      
+       
+    </body>
+</html>
